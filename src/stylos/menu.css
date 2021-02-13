@@ -1,0 +1,22 @@
+.menu_1{
+
+    background-color: black;
+    height: 80px;
+    width: 100%;
+
+}
+
+h1 {
+
+    color: blanchedalmond;
+    margin: auto;
+    display: inline;
+
+}
+
+button{
+
+    height: 30px;
+    width: 70px;
+
+}
