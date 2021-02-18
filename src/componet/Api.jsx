@@ -18,7 +18,7 @@ const Api = () => {
             console.log(error);
         });
     }, [setList]);
-    /* console.log(list) */
+     console.log(list) 
     return ( <div className="container">
 
         {list.map(item=>(

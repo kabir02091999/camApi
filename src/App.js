@@ -27,7 +27,7 @@ function App() {
             <Route path="/" >
               
             </Route>
-aadsa
+
           </Switch>
       </Router>
       

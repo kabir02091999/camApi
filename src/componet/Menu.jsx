@@ -9,9 +9,13 @@ import {
 
 const menu = () => {
     return ( <div className="menu_1">
-      <h1>rick and morty</h1>
-      <Link to="/" className=""><button>inicio</button></Link>
-      <Link to="/personas" className=""><button>personas</button></Link>
+      <div className ="contenido">
+        <h1>rick and morty</h1>
+      </div>
+      <div className="botones">
+        <Link to="/" className="boton1"><button>inicio</button></Link>
+        <Link to="/personas" className="boton1"><button>personas</button></Link>
+      </div>
     </div> );
 }
  

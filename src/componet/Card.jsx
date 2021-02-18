@@ -8,7 +8,9 @@ const Card = (props) => {
         id,
         name,
         status,
-        species
+        species,
+        origin,
+        location
         } 
         } = props
 
@@ -19,7 +21,9 @@ const Card = (props) => {
             <img src={image}></img>
             <h4>{id} - {name}</h4>
             <p>status:{status}</p>
-            <p>species:{species}    </p>
+            <p>species:{species}</p>
+            <p>origin:{origin.name}</p>
+            <p>location:{location.name}</p>
 
         </div>
         

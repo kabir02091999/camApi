@@ -3,6 +3,25 @@
     background-color: black;
     height: 80px;
     width: 100%;
+    display: flex;
+
+}
+
+.contenido{
+
+    width: 50%;
+    padding-top: 15px;
+    padding-left: 30px;
+
+}
+
+.botones{
+
+    width: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 3%;
+    padding-top: 23px;
 
 }
 
@@ -18,5 +37,7 @@ button{
 
     height: 30px;
     width: 70px;
+    margin-left: 10px;
+    border-radius: 15%;
 
 }
