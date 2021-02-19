@@ -32,36 +32,38 @@ const Api = () => {
                 
             </div>))
 
-    }
- */
-    const show = (value) => (
-        <div className="container">
-        
-            <li key={value.id} className="card">
+            <div key={value.id}>
                 <span><img src={value.image}></img>
                 <h4>{value.id} - {value.name}</h4>
                 <p>status:{value.status}</p>
                 <p>species:{value.species}</p>
                 <p>origin:{value.origin.name}</p>
                 <p>location:{value.location.name}</p></span>         
-            </li>
-        
-        </div>
+            </div>
+
+    }
+ */
+    const show = (value) => (
+
+        <div key={value.id} className="card">
+        <span><img src={value.image}></img>
+        <h4>{value.id} - {value.name}</h4>
+        <p>status:{value.status}</p>
+        <p>species:{value.species}</p>
+        <p>origin:{value.origin.name}</p>
+        <p>location:{value.location.name}</p></span>         
+    </div>
       )
 
     return ( 
-        <div className="container">
-        
             <Pagination
+            class="pepe"
             data={list}
             Show={show}
-            displayNumber="5"
+            displayNumber="6"
             previousText="atras"
-            nextText="Sonraki"
+            nextText="siguiente"
             />
-
-        </div>
-        
 
      );
 }
