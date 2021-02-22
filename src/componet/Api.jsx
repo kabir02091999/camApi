@@ -4,14 +4,17 @@ import Card from "./Card"
 import '../stylos/stylosCard.css'
 import Pagination from 'pagination-react-hooks';
 
+import ReactPaginate from 'react-paginate';
+
 
 
 const Api = () => {
      
     const [list, setList] = useState([]);
+    const [pagina, setpagina] = useState(1);
     useEffect(() => {
         Axios({
-        url: "https://rickandmortyapi.com/api/character",
+        url: "https://rickandmortyapi.com/api/character/?page=" + pagina,
         })
         .then((response) => {
             setList(response.data.results);
@@ -19,7 +22,7 @@ const Api = () => {
         .catch((error) => {
             console.log(error);
         });
-    }, [setList]);
+    }, [setList,pagina]);
      console.log(list)
      
     /* const llamar = (list) => {
@@ -44,7 +47,7 @@ const Api = () => {
     }
  */
     const show = (value) => (
-
+        
          <div key={value.id} className="card">
             <span>{/* <img src={value.image}></img>
             <h4>{value.id} - {value.name}</h4>
@@ -53,25 +56,47 @@ const Api = () => {
             <p>origin:{value.origin.name}</p>
             <p>location:{value.location.name}</p> */}
             
-                <Card parame={value} key={value.id} />
+                {/* <Card parame={value} key={value.id} / >*/}
+
             
             </span>         
         </div> 
 
-        
-
       )
 
+    const handlePageClick = (obje) =>{
+
+        setpagina(obje.selected+1)
+
+    }        
+
+    console.log(list)
     return ( 
         <div className="container">
-            <Pagination
-            class="pepe"
-            data={list}
-            Show={show}
-            displayNumber="5"
-            previousText="atras"
-            nextText="siguiente"
-            />    
+        
+            {list.map(car => (
+
+                <div key={car.id}>
+
+                    <Card parame={car}/>
+
+                </div>
+
+            ))}
+        <ReactPaginate
+            previousLabel={'<'}
+            nextLabel={'>'}
+            breakLabel={'...'}
+            breakClassName={'break-me'}
+            pageCount={20}
+            marginPagesDisplayed={2}
+            pageRangeDisplayed={5}
+            onPageChange={handlePageClick}
+            containerClassName={'pagination'}
+            subContainerClassName={'pages pagination'}
+            activeClassName={'active'}
+            />
+                
         </div>
      );
 }
