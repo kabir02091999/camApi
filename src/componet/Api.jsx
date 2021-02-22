@@ -25,44 +25,6 @@ const Api = () => {
     }, [setList,pagina]);
      console.log(list)
      
-    /* const llamar = (list) => {
-
-        list.map(data => (
-           
-            <div key={data.id}>
-                
-                <Card parame={data}/>
-                
-            </div>))
-
-            <div key={value.id}>
-                <span><img src={value.image}></img>
-                <h4>{value.id} - {value.name}</h4>
-                <p>status:{value.status}</p>
-                <p>species:{value.species}</p>
-                <p>origin:{value.origin.name}</p>
-                <p>location:{value.location.name}</p></span>         
-            </div>
-
-    }
- */
-    const show = (value) => (
-        
-         <div key={value.id} className="card">
-            <span>{/* <img src={value.image}></img>
-            <h4>{value.id} - {value.name}</h4>
-            <p>status:{value.status}</p>
-            <p>species:{value.species}</p>
-            <p>origin:{value.origin.name}</p>
-            <p>location:{value.location.name}</p> */}
-            
-                {/* <Card parame={value} key={value.id} / >*/}
-
-            
-            </span>         
-        </div> 
-
-      )
 
     const handlePageClick = (obje) =>{
 
@@ -83,19 +45,21 @@ const Api = () => {
                 </div>
 
             ))}
-        <ReactPaginate
-            previousLabel={'<'}
-            nextLabel={'>'}
-            breakLabel={'...'}
-            breakClassName={'break-me'}
-            pageCount={20}
-            marginPagesDisplayed={2}
-            pageRangeDisplayed={5}
-            onPageChange={handlePageClick}
-            containerClassName={'pagination'}
-            subContainerClassName={'pages pagination'}
-            activeClassName={'active'}
-            />
+            <div className="pagina">
+                <ReactPaginate
+                    previousLabel={'<'}
+                    nextLabel={'>'}
+                    breakLabel={'...'}
+                    breakClassName={'break-me'}
+                    pageCount={20}
+                    marginPagesDisplayed={2}
+                    pageRangeDisplayed={5}
+                    onPageChange={handlePageClick}
+                    containerClassName={'pagination'}
+                    subContainerClassName={'pages pagination'}
+                    activeClassName={'active'}
+                />
+            </div>
                 
         </div>
      );
