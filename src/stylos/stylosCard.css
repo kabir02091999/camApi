@@ -18,14 +18,32 @@
     background-color:rgb(37, 37, 35);
     width: 30px;
     height: 30px;
+    padding-top: 5px;
+    display: inline-block;
     text-align: center;
     border-radius: 20%;
     color: honeydew;
+    
 
 } 
 .pagina{
 
-    width: 100%;
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    flex-wrap: wrap; 
+    justify-content: center;
+
+}
+
+.pagination{
+
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: center;
 
 }
 
