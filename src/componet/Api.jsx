@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react';
 import Axios from "axios"
 import Card from "./Card"
 import '../stylos/stylosCard.css'
-import Pagination from 'pagination-react-hooks';
+
 
 import ReactPaginate from 'react-paginate';
 
@@ -23,26 +23,25 @@ const Api = () => {
             console.log(error);
         });
     }, [setList,pagina]);
-     console.log(list)
+    /*  console.log(list) */
      
 
     const handlePageClick = (obje) =>{
-
+        
         setpagina(obje.selected+1)
-
     }        
 
-    console.log(list)
+    /* console.log(list) */
     return ( 
         <div className="container">
         
             {list.map(car => (
 
-                <div key={car.id}>
+                
 
                     <Card parame={car}/>
 
-                </div>
+                
 
             ))}
             <div className="pagina">
@@ -51,7 +50,7 @@ const Api = () => {
                     nextLabel={'>'}
                     breakLabel={'...'}
                     breakClassName={'break-me'}
-                    pageCount={20}
+                    pageCount={30}
                     marginPagesDisplayed={2}
                     pageRangeDisplayed={5}
                     onPageChange={handlePageClick}

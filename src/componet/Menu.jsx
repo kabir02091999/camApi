@@ -1,10 +1,7 @@
 import React from 'react'
 import '../stylos/menu.css'
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
+  Link
   } from "react-router-dom";
 
 const menu = () => {

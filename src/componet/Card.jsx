@@ -14,7 +14,7 @@ const Card = (props) => {
         } 
         } = props
 
-    return ( <div className="container">
+    return ( 
         
         <div className="card">
 
@@ -27,7 +27,7 @@ const Card = (props) => {
 
         </div>
         
-    </div> );
+    );
 }
  
 export default Card;
