@@ -36,13 +36,7 @@ const Api = () => {
         <div className="container">
         
             {list.map(car => (
-
-                
-
-                    <Card parame={car}/>
-
-                
-
+                <Card parame={car}/>  
             ))}
             <div className="pagina">
                 <ReactPaginate
